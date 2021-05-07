@@ -1,11 +1,15 @@
+# import libraries for sending emails
 from email.mime.text import MIMEText
 import smtplib
 
-def send_email(email, height):
+# function for sending email that includes variables below
+def send_email(email, height, average_height, count):
+    # mail data from the sender
     from_email = "bashooff@gmail.com"
     from_password = "Dragon007"
     to_email = email
 
+    # contents
     subject = "Height data"
     message = "Hey there you, your height is <strong>%s</strong>. Average height of all is %s and that is calculated out %s of people " % (height, average_height, count)
     
